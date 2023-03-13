@@ -395,11 +395,10 @@ nav li a:hover, nav li.active a {border-color: rgba(255,255,255, 1);}
 .main-layout .h-title {margin: 0;padding: 0 0 40px;letter-spacing: -0.02em;font-size: 110px; line-height: 1; text-transform: uppercase;}
 .main-layout .h-title strong { font-weight: bold;}
 
-.main-layout .options-list {margin: 0 -20px; display: flex;}
-.main-layout .option-item {width: 33.33%; max-width: 370px; padding: 0 20px 40px;}
-.main-layout .b-btn {}
-.main-layout .options-list {}
-.main-layout .options-list {}
+.main-layout .options-list,
+.main-layout .options-list--btns {margin: 0 -20px; display: flex;}
+.main-layout .option-item,
+.main-layout .options-list--btns .b-btn {width: 33.33%; max-width: 370px; padding: 0 20px 40px;}
 
 /* Контент */
 div.content {}
@@ -771,10 +770,13 @@ body.body-lock { overflow: hidden}
     .h-title strong {font-weight: 500;}
     .main-layout {margin-bottom: 40px;}
     .main-layout .h-title {font-size: 32px;}
-    .main-layout .options-list {flex-wrap: wrap; justify-content: center;}
+    .main-layout .options-list, .main-layout .options-list--btns {flex-wrap: wrap; justify-content: center;}
     .main-layout .option-item {font-size: 18px; width: 100%; max-width: 500px; padding: 16px 0;}
+
     .main-layout .option-item+.option-item {border-top: 1px solid rgba(255,255,255, .5)}
-    .main-layout .b-btn { text-align: center; padding-top: 24px;}
+    .main-layout .options-list--btns .b-btn {width: 100%; padding-top: 24px; padding-bottom: 10px; text-align: center}
+    .main-layout .options-list--btns .b-btn .btn {width: 100%; max-width: 450px;}
+    .main-layout .options-list--btns .b-btn .btn .btn__icon { margin-left: auto}
     .project-list {
         display: flex;
         flex-wrap: wrap;
