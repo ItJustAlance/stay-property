@@ -371,9 +371,14 @@ header.fixed {background: #FFFFFF;     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.
 header.fixed .ic-logo {fill: #3A3A3A; width: 235px; height: 41px;}
 header.fixed nav li a {color: #1D1D1B}
 header.fixed #hamburger-icon .line {background: #1D1D1B;}
-header.fixed  nav.header__nav .btn--podbor {background: none; color: #1698E1;}
-header.fixed  nav.header__nav .btn--podbor svg {stroke: #1698E1;}
+nav.header__nav .btn--podbor {background: none; color: #fff; border-color: #fff;}
+nav.header__nav .btn--podbor svg {stroke: #fff;}
+nav.header__nav .btn--podbor:hover {border-color: #1698E1; background: #1698E1;}
+header.fixed  nav.header__nav .btn--podbor {background: none; color: #1698E1; border-color: #1698E1}
 
+header.fixed  nav.header__nav .btn--podbor svg {stroke: #1698E1;}
+header.fixed  nav.header__nav .btn--podbor:hover {background: #1698E1; color: #fff;}
+header.fixed  nav.header__nav .btn--podbor:hover svg {stroke: #fff;}
 
 /* Навигация */
 
@@ -700,6 +705,7 @@ body.body-lock { overflow: hidden}
     nav li a {font-size: 16px;}
     nav li {margin-left: 25px;}
     nav.header__nav .btn--podbor {font-size: 15px;}
+
 }
 @media(max-width: 1100px){
     #hamburger-icon { display: block}
@@ -709,8 +715,17 @@ body.body-lock { overflow: hidden}
     nav li { padding: 0 16px; margin: 0;}
     .active_m nav.nav {}
     nav ul {padding-bottom: 20px;}
-    nav.header__nav .btn--podbor {margin-left: 0; background: none; color: #1698E1;}
-    nav.header__nav .btn--podbor svg {stroke: #1698E1;}
+
+
+    nav.header__nav .btn--podbor,
+    header.fixed  nav.header__nav .btn--podbor,
+    header.fixed  nav.header__nav .btn--podbor:hover,
+    nav.header__nav .btn--podbor:hover
+     {background: none; color: #1698E1; border-color: #1698E1; margin-left: 0;}
+    nav.header__nav .btn--podbor svg,
+    nav.header__nav .btn--podbor:hover svg,
+    header.fixed  nav.header__nav .btn--podbor svg,
+    header.fixed  nav.header__nav .btn--podbor:hover svg {stroke: #1698E1;}
 }
 
 @media(max-width: 1024px){
