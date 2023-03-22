@@ -390,8 +390,13 @@ nav li{margin-left: 40px;}
 nav li a {color: #fff; font-size: 18px; display: inline-block; vertical-align: top;border-bottom: 2px solid rgba(255,255,255, 0); padding-bottom: 14px; text-decoration: none;}
 nav li a:hover, nav li.active a {border-color: rgba(255,255,255, 1);}
 
-.main-layout { position: relative; z-index: 1; min-height: 100vh; padding-top: 140px; color: #fff; margin-bottom: 180px; padding-bottom: 40px; display: flex; flex-direction: column; justify-content: center}
-.main-layout:before {width: 100vw; height: 100%; position: absolute;top: 0;left: calc(50% - 50vw); background: url(../img/main-bg.png) 50% 50% no-repeat; background-size: cover; content: ""; display: block; z-index: -1;}
+.main-wrapper {position: relative; overflow: hidden; margin-bottom: 180px;}
+.main-wrapper .all { position: relative;z-index: 2;}
+.main-wrapper .main-video {position: absolute;top: 0; left: 0; width: 105vw; height: 100%; z-index: 1;}
+.main-wrapper .main-video video {object-fit: cover; object-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.main-wrapper .main-video:before {background: rgba(0,0,0, .5); width: 100%; height: 100%; position: absolute;top: 0; left: 0;z-index: 1; content: ""}
+.main-layout { position: relative; z-index: 1; min-height: 100vh; padding-top: 140px; color: #fff;  padding-bottom: 40px; display: flex; flex-direction: column; justify-content: center}
+/* .main-layout:before {width: 100vw; height: 100%; position: absolute;top: 0;left: calc(50% - 50vw); background: url(../img/main-bg.png) 50% 50% no-repeat; background-size: cover; content: ""; display: block; z-index: -1;} */
 .main-layout .h-title {margin: 0;padding: 0 0 40px;letter-spacing: -0.02em;font-size: 110px; line-height: 1; text-transform: uppercase;}
 .main-layout .h-title strong { font-weight: bold;}
 

@@ -54,8 +54,4 @@ $(function() {
     $(this).parent(".b-client-etc").fadeOut();
     return false;
   })
-  
 });
-
-
-
